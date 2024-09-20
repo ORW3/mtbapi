@@ -13,6 +13,8 @@ const usuarioSchema = new mongoose.Schema(
         tipoSangre: { type: String },
         sexo: { type: String },
         estado: { type: String },
+        fotoBici: { type: String, required: true },
+        logo: { type: String, default: "" }
     },
     { timestamps: true }
 );

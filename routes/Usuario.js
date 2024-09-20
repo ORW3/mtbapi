@@ -35,7 +35,9 @@ usuarioRoute.post("/", AsyncHandler(async (req, res) => {
         edad, 
         tipoSangre, 
         sexo, 
-        estado 
+        estado,
+        fotoBici,
+        logo 
     } = req.body;
 
     const existUsuario = await Usuario.findOne({ correoElectronico });
@@ -53,7 +55,9 @@ usuarioRoute.post("/", AsyncHandler(async (req, res) => {
             edad,
             tipoSangre,
             sexo,
-            estado
+            estado,
+            fotoBici,
+            logo
         });
 
         if (usuario) {
@@ -68,6 +72,8 @@ usuarioRoute.post("/", AsyncHandler(async (req, res) => {
                 tipoSangre: usuario.tipoSangre,
                 sexo: usuario.sexo,
                 estado: usuario.estado,
+                fotoBici: usuario.fotoBici,
+                logo: usuario.logo,
                 createdAt: usuario.createdAt,
             });
         } else {
