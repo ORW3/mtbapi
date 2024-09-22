@@ -15,6 +15,7 @@ usuarioRoute.post('/login', AsyncHandler(
                 nombreCompleto: usuario.nombreCompleto,
                 correoElectronico: usuario.correoElectronico,
                 token: generateToken(usuario._id),
+                fotoBici: usuario.fotoBici,
                 createdAt: usuario.createdAt,
             });
         } else {
